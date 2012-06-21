@@ -5,11 +5,11 @@ It is a first practice to interpret c-like script code.
 
 # use javascript to implement 
  features:
- <a> assign
- <b> if (expr) { block0 } else { block1 }
- <c> function
-    - print
-    - push
+ a. assign
+ b. if (expr) { block0 } else { block1 }
+ c. function
+    * print
+    * push
 
 # tests
 
