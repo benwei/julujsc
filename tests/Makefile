@@ -1,3 +1,8 @@
 
+tdds = tdd01_parser.js
+tdds += tdd02_ast.js
 all:
-	node tdd01.js
+	@for tdd in $(tdds) ; do \
+	echo "===<< run tests $$tdd >>===" ; \
+	node $$tdd ; \
+	done
