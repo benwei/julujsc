@@ -154,6 +154,10 @@ function JuluParser(code) {
     this.VarValue = function (vname) {
         return self.vars[vname + self.blocknum]
     }
+
+    this.VarSetValue = function (vname, value) {
+        self.vars[vname + self.blocknum] = value;
+    }
  
     this.dofunc = function (funcname, data, base) {
         var prev_token = '';
@@ -181,6 +185,13 @@ function JuluParser(code) {
             dlog("skip block 1")
         } else if (funcname == 'push') {
             self.stacks.push(w)
+        } else if (funcname == 'pop') {
+            if (w.length > 0) {
+                var v = self.stacks.pop()
+                self.VarSetValue(w, v);
+            } else {
+                self.stacks.pop()  // throw the stack value;
+            }
         } else if (funcname == 'print') {
             // put symtable
             print(w);    

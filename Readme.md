@@ -7,9 +7,14 @@ It is a first practice to interpret c-like script code.
  features:
  a. assign
  b. if (expr) { block0 } else { block1 }
- c. function
-    * print
-    * push
+
+# functions
+* print
+* push(var) or push(string)
+* pop
+ ex: 
+  pop(x)  : get stack top value to variable x
+  pop()   : throw value
 
 # tests
 

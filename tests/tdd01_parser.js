@@ -36,7 +36,7 @@ function main () {
     test2="a=4321 push(a)"
     test3="b=2+1+3-4 push(b)"
     test4="d=(4/2)*3 push(d)"
-    test0="a=120 b=2+1+1-3 c=10/2*3 d=(4/2)*3 if (a eq 11)  { print(21) push(21) } else  { print(a) push(22) }"
+    test5="a=120 b=2+1+1-3 c=10/2*3 d=(4/2)*3 if (a eq 11)  { print(21) push(21) } else  { print(a) push(22) }"
     test6="func(a) { print(a) }  a=120 b=2+1+1-3 c=10/2*3 d=(4/2)*3 if (a eq 11)  { print(21) push(21) } else  { print(a) push(22) }"
 
 
@@ -51,8 +51,16 @@ function main () {
 
     r = testcase(4, test4) 
     check_if('get Value', r == 6)
-    r = testcase(0, test0) 
+    r = testcase(5, test5) 
     check_if('if condition false', r == 22)
+
+    test7="a=101 push(a) pop(b) print(b) push(0)"
+    r = testcase(7, test7)
+    check_if('push/pop condition', r == '0')
+
+    test8="a=102 push(a) push(100) push(0) pop() pop(b) print(b)"
+    r = testcase(8, test8)
+    check_if('push/pop condition', r == 102)
 }
 
 main()
