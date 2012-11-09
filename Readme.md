@@ -7,6 +7,7 @@ It is a first practice to interpret c-like script code.
  features:
  a. assign
  b. if (expr) { block0 } else { block1 }
+ c. match function argument with quote
 
 # functions
 * print

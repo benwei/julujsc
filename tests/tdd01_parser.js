@@ -3,7 +3,7 @@
 * test cases
 *
 * (c) ben@staros.mobi (2012)
-* License: MIT-like License
+* License: MIT License
 ***********************************/
 
 var util = require('util'),
